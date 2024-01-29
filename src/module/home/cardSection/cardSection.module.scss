@@ -1,0 +1,15 @@
+@import '../../../styles/mixins/index.scss';
+
+.cardSectionAlignment {
+    padding: 90px 0;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        gap: 29px;
+        .gridItems:nth-child(2n + 1 ) {
+            margin-top: 96px;
+        }
+     
+    }
+}

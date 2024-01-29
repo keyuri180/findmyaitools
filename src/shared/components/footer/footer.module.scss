@@ -1,0 +1,78 @@
+@import '../../../styles/mixins/index.scss';
+
+.footer {
+
+    .copyRightAlignment {
+        padding: 40px 0;
+        position: relative;
+
+        .iconsAlignment {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        p {
+            @include font16;
+            color: $theme-white;
+            text-align: center;
+            opacity: .8;
+            font-weight: 400;
+            margin: 0;
+
+            span {
+                color: $theme-gray-100;
+                cursor: pointer;
+                text-decoration-line: underline;
+            }
+        }
+    }
+
+    .footerAlignment {
+        padding: 0 0 55px 0;
+        border-bottom: 1px solid rgb(255, 255, 255, 0.10);
+
+        .footerGrid {
+            display: grid;
+            grid-template-columns: 1fr 338px;
+            gap: 200px;
+
+            .footerLinkAlignment {
+                display: flex;
+                justify-content: space-between;
+
+                h6 {
+                    @include font18;
+                    font-weight: 700;
+                    color: $theme-white;
+                    margin: 0 0 22px 0;
+                }
+
+                a {
+                    display: block;
+                    padding: 0 0 16px 0;
+                    @include font16;
+                    font-weight: 500;
+                    color: $theme-gray-100;
+                    opacity: 0.55;
+                    transition: .3s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $theme-primary-background-color;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

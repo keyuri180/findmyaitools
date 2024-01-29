@@ -1,0 +1,104 @@
+@import '../../../styles/mixins/index.scss';
+
+.testimonialAlignment {
+    .title {
+        padding: 0 0 45px 0;
+
+        h2 {
+            @include heading2;
+            color: $theme-white;
+            position: relative;
+            display: inline-block;
+
+            &::before {
+                position: absolute;
+                bottom: -2px;
+                background: var(--Gradient, linear-gradient(90deg, #F65C54 0%, #AB57A5 51.14%, #5C52FB 100%));
+                height: 3px;
+                content: '';
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+    :global(.slick-slide) {
+        padding: 0 10px;
+    }
+    :global(.slick-list) {
+        margin: 0 -10px;
+    }
+
+    .leftArrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        left: -80px;
+    }
+    .rightArrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        right: -80px;
+
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    .sliderDesign {
+        .card {
+            padding: 22px;
+            border-radius: 28px;
+            border: 3px solid rgba(255, 255, 255, 0.08);
+
+            .details {
+                h5 {
+                    @include font18;
+                    color: $theme-gray;
+                    margin: 0 0 8px 0;
+                    font-weight: 800;
+                }
+
+                p {
+                    @include font14;
+                    font-weight: 500;
+                    color: $theme-light-100;
+                    line-height: 23px; 
+                }
+            }
+
+            .profile {
+                display: grid;
+                grid-template-columns: 50px 1fr;
+                align-items: center;
+                padding: 0 0 15px 0;
+                gap: 12px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                p {
+                    @include font16-bold;
+                    font-weight: 800;
+                    color: $theme-gray-200;
+                    margin: 0 0 2px 0;
+                }
+
+                span {
+                    display: block;
+                    @include font14;
+                    color: $theme-gray-200;
+
+                }
+
+            }
+        }
+    }
+}

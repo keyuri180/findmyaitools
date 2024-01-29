@@ -1,0 +1,42 @@
+@import '../../../../styles/mixins/index.scss';
+
+.searchbar {
+    position: relative;
+
+    input {
+        width: 100%;
+        border-radius: 999px;
+        height: 46px;
+        padding-left: 16px;
+        padding-right: 60px;
+        background-color: $search-input-background-color;
+        border: 1px solid $search-input-border-color;
+        @include font16;
+        transition: .3s ease-in-out;
+        color: $theme-white;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $theme-primary-background-color;
+        }
+    }
+
+    .searchIcon {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $theme-primary-background-color;
+    }
+
+    ::placeholder {
+        @include font16;
+        color: $theme-gray-800;
+    }
+}

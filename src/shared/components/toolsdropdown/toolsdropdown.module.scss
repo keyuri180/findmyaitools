@@ -1,0 +1,19 @@
+@import '../../../styles/mixins/index.scss';
+
+.toolsdropdown {
+    position: relative;
+
+    button {
+        border: 1.8px solid #B75797;
+        padding: 10px 25px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        border-radius: 6px;
+        color: $theme-white;
+        @include font16;
+        font-weight: 600;
+    }
+}

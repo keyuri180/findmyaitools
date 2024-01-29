@@ -1,0 +1,66 @@
+@import '../../../styles/mixins/index.scss';
+
+.toolssectionAlignment {
+    padding: 90px 0 0 0;
+
+    .titleAlignment {
+        display: flex;
+        align-items: center;
+        padding: 0 0 44px 0;
+        justify-content: space-between;
+
+
+        h3 {
+            @include heading2;
+            color: $theme-white;
+            position: relative;
+            display: inline-block;
+
+            span {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    bottom: -2px;
+                    background: var(--Gradient, linear-gradient(90deg, #F65C54 0%, #AB57A5 51.14%, #5C52FB 100%));
+                    height: 3px;
+                    content: '';
+                    left: 0;
+                    width: 100%;
+                }
+            }
+
+
+        }
+    }
+
+    .grid {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(5, 1fr);
+
+        .gridItems {
+            border-radius: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.12);
+            padding: 45px 20px;
+            transition: .3s ease-in-out;
+            span {
+                display: block;
+                text-align: center;
+                @include font20;
+                color: $theme-white;
+                font-weight: 400;
+            }
+            .iconCenter {
+                padding: 0 0 19px 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            &:hover {
+                border: 2px solid $theme-primary-background-color;
+                transform: translate(0 , -5px);
+            }
+        }
+    }
+}

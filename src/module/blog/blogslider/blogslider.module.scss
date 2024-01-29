@@ -1,0 +1,57 @@
+@import '../../../styles/mixins/index.scss';
+
+.blogsliderAlignment {
+
+
+    .sliderBox {
+        height: 355px;
+        width: 100%;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.10);
+
+    }
+
+    :global(.slick-dots li.slick-active button:before) {
+        opacity: 1;
+        color: #fff;
+    }
+
+
+    :global(.slick-dots li button:before) {
+        color: #fff;
+        opacity: .5;
+    }
+
+    :global(.slick-slide) {
+        border-radius: 28px;
+    }
+
+    :global(.slick-prev) {
+        display: none !important;
+    }
+
+    :global(.slick-next) {
+        display: none !important;
+    }
+
+    .textGrid {
+        display: grid;
+        grid-template-columns: 1fr 80px 1fr;
+        gap: 32px;
+        align-items: center;
+        margin: 0 0 40px 0;
+
+        .line {
+            border-top: 1px solid rgba(255, 255, 255, 0.09);
+        }
+
+        span {
+            display: block;
+            color: $theme-white;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+        }
+    }
+}

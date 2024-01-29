@@ -1,0 +1,57 @@
+@import '../../../styles/mixins/index.scss';
+
+.copycodesectionAlignment {
+    padding: 35px 0;
+
+    .box {
+        border-radius: 6px;
+        border: 1.5px solid rgba(255, 255,
+                255,
+                0.14);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            padding: 16px 15px;
+            border-radius: 4px;
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            background-color: transparent;
+            @include font16;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            line-height: 21px;
+            color: $theme-white;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                border: 1px solid $theme-primary-background-color;
+                background-color: $theme-primary-background-color;
+            }
+        }
+
+        .leftContnet {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img {
+                display: block;
+                max-width: 250px;
+            }
+
+            span {
+                display: block;
+                @include font16;
+                color: $theme-white;
+                font-weight: 700;
+                opacity: 0.94;
+            }
+        }
+    }
+}

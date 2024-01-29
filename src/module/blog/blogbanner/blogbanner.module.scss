@@ -1,0 +1,63 @@
+@import '../../../styles/mixins/index.scss';
+
+.blogbannerAlignment {
+    padding: 53px 0;
+
+    .line {
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .textSectionAlignment {
+        margin: 53px 0 0 0;
+        padding: 0 58px;
+        border-left: 1px solid rgba(255, 255, 255, 0.09);
+        border-right: 1px solid rgba(255, 255, 255, 0.09);
+
+        .lastContnet {
+           display: grid;
+           grid-template-columns: 350px 1fr;
+           gap: 20px;
+           align-items: center;
+
+            
+           .buttonalignment {
+            display: flex;
+            align-items: center;
+
+            button {
+                padding: 9px 25px;
+                color: #B5B5BB;
+                cursor: pointer;
+                @include font16;
+                line-height: 20px;
+                letter-spacing: 0.48px;
+                border: none;
+                background-color: transparent;
+                border-radius: 99px;
+                transition: .3s ease-in-out;
+                &:hover {
+                    background-color: $theme-primary-background-color;
+                    color: $theme-white;
+                }
+            }
+           }
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 72px;
+            color: $theme-white;
+            margin: 0 0 5px 0;
+        }
+
+        p {
+            @include font16;
+            margin: 0 0 40px 0;
+            line-height: 28px;
+            max-width: 576px;
+            letter-spacing: 0.48px;
+            color: $theme-gray-100;
+        }
+    }
+}

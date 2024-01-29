@@ -1,0 +1,12 @@
+@import '../../../styles/mixins/index.scss';
+
+.filtermodalwrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+backdrop-filter: blur(6px);
+z-index: 9999;
+    height: 100%;
+}

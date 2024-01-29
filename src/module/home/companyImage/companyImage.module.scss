@@ -1,0 +1,19 @@
+@import '../../../styles/mixins/index.scss';
+
+.companyImage {
+    background: linear-gradient(90deg, rgba(98, 93, 245, 0.10) 0.01%, rgba(98, 93, 245, 0.03) 16.53%, rgba(98, 93, 245, 0.03) 49.06%, rgba(98, 93, 245, 0.03) 83.21%, rgba(98, 93, 245, 0.10) 99.99%);
+    backdrop-filter: blur(19.596906661987305px);
+    padding: 41px 0;
+    margin: 80px 0 0 0;
+
+    .imageAlignment {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            cursor: pointer;
+            display: block;
+        }
+    }
+}

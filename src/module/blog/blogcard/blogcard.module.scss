@@ -1,0 +1,12 @@
+@import '../../../styles/mixins/index.scss';
+
+.blogcardAllAlignment {
+    padding: 90px 0;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        gap: 40px 28px;
+        padding: 0 0 90px 0;
+    }
+}

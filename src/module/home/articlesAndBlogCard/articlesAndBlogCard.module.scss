@@ -1,0 +1,72 @@
+@import '../../../styles/mixins/index.scss';
+
+.articlesAndBlogCard {
+    .image {
+        img {
+            display: block;
+            height: 191px;
+            border-radius: 15px;
+            width: 100%;
+        }
+    }   
+
+    .detailsAlignment {
+        padding: 16px 0  0 0;
+        
+        h5 {
+            @include font20;
+            font-weight: 700;
+            color: $theme-white;
+            opacity: 0.95;
+        }
+
+        .button {
+            button {
+                width: 100%;
+                background-color: transparent;
+                padding: 13px;
+                @include font16-bold;
+                border: 1px solid $theme-button-border-color;
+                border-radius: 999px;
+                font-weight: 600;
+                letter-spacing: 0.48px;
+                transition: .3s ease-in-out;
+                color: $theme-gray-100;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $theme-primary-background-color;
+                    color: $theme-white;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+
+        .lastContnetAlignment {
+            display: flex;
+            padding: 0 0 20px 0;
+            align-items: center;
+            justify-content: space-between;
+
+            .icontext {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            span {
+                display: block;
+                color: $theme-gray-100;
+                @include font16;
+                font-weight: 500;
+                letter-spacing: 0.48px;
+            }
+        }
+
+        .line {
+            margin: 20px 0 0 0;
+            padding: 0 0 20px 0;
+            border-top: 1px solid $divider-color;
+        }
+    }
+}

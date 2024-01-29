@@ -1,0 +1,50 @@
+@import '../../../../styles/mixins/index.scss';
+
+.categoriescard {
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 13px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        transform: translate(0, -5px);
+
+        .textGrid {
+            img {
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    .textGrid {
+        padding: 48px 0 0 0;
+        display: grid;
+        grid-template-columns: 1fr 22px;
+        gap: 40px;
+
+        img {
+            display: block;
+            transition: .3s ease-in-out;
+        }
+
+        span {
+            display: block;
+            @include font14;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.55);
+        }
+    }
+
+    button {
+        border: none;
+        cursor: pointer;
+        @include font14;
+        padding: 3px 12px;
+        border-radius: 999px;
+        background-color: $theme-primary-background-color;
+        font-weight: 700;
+        color: $theme-white;
+    }
+}
